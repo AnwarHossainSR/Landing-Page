@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+body{
+	background: #fff;
+	color: #2d3436;
+	display: flex;
+	min-height: 100vh;
+}
+.container{
+	margin: auto auto;
+	padding: 4rem;
+	width: 45rem;
+	border:1px solid #0097e6;
+}
+h2{
+	font-size: 1.75rem;
+	color: #0097e6;
+	padding: 1.3rem;
+	margin: 0;
+}
+.accordion a{
+	text-decoration: none;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 1rem 3rem 1rem 1rem;
+	color: #7288A2;
+	font-size: 1.2rem;
+	font-weight: 400;
+	border-bottom: 1px solid #ddd;
+}
+.accordion a.active{
+	color: #03b5d2;
+	border-bottom: 1px solid #03b5d2;
+}
+.accordion a:hover, .accordion a:hover::after{
+	cursor: pointer;
+	color: #03b5d2; 
+}
+.accordion a::after{
+	font-family: "FontAwesome";
+	content: '\f13a';
+	position: absolute;
+	float: right;
+	right: 1rem;
+	font-size: 1.5rem;
+	color: #03b5d2;
+}
+.accordion a.active::after{
+	font-family: "FontAwesome";
+	content: '\f139';
+	font-weight: 300;
+}
+.accordion .content p{
+	font-size: 1rem;
+	font-weight: 300;
+}
+.accordion .content{
+	opacity: 0;
+	max-height: 0;
+	padding: 0 1rem;
+	border-bottom: 1px solid #ddd;
+	overflow:hidden;
+	transition: 0.3s all linear;
+}
+.accordion .content.active{
+	opacity: 1;
+	max-height: 100%;
+	padding: 1rem;
+	transform: 0.3s all linear;
+}
+
